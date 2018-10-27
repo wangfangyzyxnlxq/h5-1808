@@ -1,0 +1,14 @@
+.login {height:541px;margin-bottom:50px;}
+.login .fl{width:448px;height:376px;float: left;margin-top: 20px;}
+.login .fr{width:448px;height:376px;float:right;}
+.login .fr .hd{width:448px;height:40px;font-size: 16px;line-height: 40px;margin-bottom: 3px;color:red;}
+
+.login .fr .bd{width:448px;height:337px;border:1px solid #e5e5e5;padding:30px 20px;}
+.login  .fr .bd input{display:block;width:305px;height:40px;border:1px solid #e5e5e5;}
+.login .fr .bd .hz{width:15px;height:15px;display:inline-block;}
+.login .fr .bd .tk .zc{margin-left:50px;}
+.login .fr .btn{display:block;width:305px;height:40px;background-color:#dc0f50;margin-top: 40px;text-align: center;color:#fff;font-size:16px;line-height: 40px;}
+.login .fr .btn:hover{opacity: 0.9;}
+#pd1{color:red;}
+/*bottom部分*/
+ #bottom{height:100px;background-color: #333333;}

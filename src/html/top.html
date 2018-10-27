@@ -1,0 +1,125 @@
+    <div class="topbar">
+      <div id="top">
+            <div class="top con">
+             <span><a href="">收藏</a></span>
+             <span><a href="">首页</a></span>
+             <span><a href="html/login.html">请登录</a></span>
+             <span><a href="html/reg.html">免费注册</a></span>
+             <span><a href="">购物车<i id="tb">0</i>件</a></span>
+             <span><a href="">我的家有</a></span>
+             <span><a href="">可用优惠卷<i>0</i>张</a></span>
+             <span><a href="">我的收藏</a></span>
+             <span><a href=""><i class=sj></i>手机版</a></span>
+             <span><a href=""><i class=wx></i>微信版</a></span>
+            </div>
+            
+        </div>
+        <!-- logo区 -->
+            <div id="logo">
+                <div class="logo con">
+                    <h3><img src="../images/logo.jpg" alt="" /></h3>
+                <div class="suo">
+                    <input type="text" />
+                    <a href="../html/list.html">搜索</a><br />
+                    <div class="tz">
+                    <span><a href="">新榜样</a></span>
+                    <span><a href="">同仁堂</a></span>
+                    <span><a href="">棉记</a></span>
+                    <span><a href="">歌丽姬宝</a></span>
+                    <span><a href="">4层抽纸30包</a></span>
+                    <span><a href="">多洗来</a></span>
+                    <span><a href="">键安喜</a></span>
+                    </div>
+                    <div class="car">
+                         <!-- 我的购物车 s-->
+            <div class="mycart l" id="__AD_head__shopcart">
+                <div class="cart-bag">
+                    <div class="w-bj">
+                        <i class="icar t">
+                            <img src="../picture/gwc.png" width="19" height="18" alt="家有汇购物车" title="家有汇购物车"
+                            />
+                        </i>
+                        <i class="ijt t">
+                        </i>
+                        <a href="../html/car.html">
+                            我的购物车
+                        </a>
+                        <span class="cartnum t" id="cart_num_1">
+                            0
+                        </span>
+                    </div>
+                </div>
+                <div class="cart-info">
+                    <!--购物车没有商品 s-->
+                    <p class="none_cart">
+                        <ul id="output">
+
+                        <!-- <span class="price">￥</span>
+                        <span class="uname"></span> -->
+                        </ul>
+                        <span id="all"></span>
+                    </p>
+                    <!-- 购物车还没有商品，快去挑选吧~ -->
+                    <!--购物车没有商品 e-->
+                    <!--购物车有商品 s-->
+                    <!-- <div class="carlist" id="cartlist">
+                        <!购物车没有商品 s-->
+                       <!--  <p class="none_cart">
+                            努力加载中，请稍后~
+                        </p> -->
+                        <!--购物车没有商品 e-->
+                    </div>
+                    <!-- 购物车有商品 e-->
+                </div>
+            </div>
+            <!-- 我的购物车 e-->
+                    </div>
+            </div>
+
+            </div>
+            </div>
+            <!-- nav部分 -->
+        <div id="nav">
+            <div class="nav con">
+                 <ul class="u1">
+                        <li class="li1">
+                        <a href="">所有商品分类</a>
+                        <ul class="u2">
+                                <li><a href="">营养保健</a></li>
+                                <li><a href="">美容化妆</a></li>
+                                <li><a href="">服饰鞋包</a></li>
+                                <li><a href="">家居家纺</a></li>
+                                <li><a href="">酒水名茶</a></li>
+                                <li><a href="">家用电器</a></li>
+                                <li><a href="">粮油生鲜</a></li>
+                                <li><a href="">珠宝钟表</a></li>
+                                <li><a href="">休闲食品</a></li>
+                                <li><a href="">黄金饰品</a></li>
+                                <li><a href="">海外购</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">首页</a>
+                        </li>
+                        <li><a href="">TV直播</a></li>
+                        <li><a href="">品牌惠</a></li>
+                        <li><a href="">惠家友APP</a></li>
+                        <li><a href="">家有尊享</a></li>
+                    </ul>
+            </div>
+        </div>
+<!-- </div>   -->
+
+   <script type="text/javascript">
+    jQuery(function($){
+        
+        //购物车
+    $(".mycart").on("mouseover",function(){
+        $(".mycart .cart-bag").addClass("active");
+        $(".mycart .cart-info").css("display","block");
+    })
+    $(".mycart").on("mouseout",function(){
+        $(".mycart .cart-bag").removeClass("active");
+        $(".mycart .cart-info").css("display","none");
+    })
+    })
+</script>

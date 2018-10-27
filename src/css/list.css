@@ -1,0 +1,64 @@
+
+/*main区域*/
+#main .main{height:2000px;
+    margin:15px auto;}
+#main .main .main_l{width:957px;height:1700px; 
+    float:left;}
+#main .main .main_l h2{width:957px;height:32px;color:#ccc;font-size: 14px;
+    line-height: 32px;
+}
+#main .main .main_l .hd{width:957px;height:119px;}
+#main .main .main_l .tab{width:957px;height:47px;background-color:#ccc;}
+#main .main .main_l .tab span{display: block;width:100px;height:47px;line-height: 47px;font-size: 14px;color:#fff;border:1px solid #ccc;float:left;margin-left: 20px;}
+
+#main .main .main_l .list{width:977px;height:1700px;
+    padding: 0 10px;
+    width: 100%;overflow:hidden;
+    margin-bottom: 0;
+}
+#main .main .main_l .list li{width:234px;height:316px;float:left;overflow:hidden;margin-bottom: 30px;text-align:center;padding:0 10px;}
+#main .main .main_l .list li a{display: block; overflow: hidden;position:relative;color: #0077dd;width:214px;height:310px;   
+}
+#main .main .main_l .list li a img{display: block;width: 214px;height:214px;}
+#main .main .main_l .list li a b
+    {padding: 5px 0;
+    overflow: hidden;
+    height: 25px;
+    line-height: 12px;
+    font-size: 14px;
+    color: #333;
+    display: block; 
+    text-align: center;
+}
+#main .main .main_l .list li a p{
+   height: 24px;
+    line-height: 24px;
+    font-size: 20px;
+    color: #e11f24;
+    text-align: center;
+    
+    }
+#Yprice.gl{color:red;background-color: pink;border:1px solid #ccc;border-bottom: none;}
+#Yxl.gl1{color:red;background-color: pink;border:1px solid #ccc;border-bottom: none;}
+
+#main .main .main_l .list li a h4{font-size: 14px;color:#666;height:24px;line-height: 16px;}
+#main .main .main_l .page{width:957px;height:45px;padding-left:150px;}
+#main .main .main_l .page span{display:inline-block;margin:10px;width:40px;line-height:1.8;text-align: center;background-color:orange;color:#666;}
+#main .main .main_l.page span.active{background-color:pink;color:#fff;}
+#main .main .main_r{width:233px;height:1037px;float:right;}
+#main .main .main_r h2{float: left;
+    padding-right: 8px;
+    font-size: 24px;
+    color: #333;
+    background: #fff;
+    line-height: 24px;
+    padding-top: 4px;
+    padding-bottom: 5px;}
+ /*bottom部分*/
+ #bottom{height:100px;background-color: #333333;}
+
+
+
+
+
+

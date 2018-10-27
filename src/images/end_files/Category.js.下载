@@ -1,0 +1,201 @@
+﻿var cateresultlist;
+
+$(document).ready(function () {
+    if (typeof (web_category) != 'undefined') {
+        Category.GetStaticList();
+    }
+    else {
+        Category.GetList();
+    }
+    //$("#txtSearch").keyup(function () {
+    //    if ($("#txtSearch").length > 0) {
+    //        $("#divHotwordout").hide();
+    //        $("#divAssociateout").show();
+    //        Associate.GetList();
+    //    }
+    //    else {
+    //        $("#divHotwordout").show();
+    //        $("#divAssociateout").hide();
+    //    }
+    //});
+    //$("#btnSearch").click(function () {
+    //    PageUrlConfig.SetUrl();
+    //    window.location.href = g_const_PageURL.Search + "?t=" + Math.random();
+    //});
+    //$("#btnBack").click(function () {
+    //    window.location.replace(PageUrlConfig.BackTo());
+
+    //});
+
+
+
+});
+
+//加载热词
+var Category = {
+    /*5.2.7 新4级分类 改变接口名称*/
+    api_target: "com_cmall_familyhas_api_APiForCategoryNew",
+    api_input: {},
+    GetList: function () {
+        var s_api_input = JSON.stringify(this.api_input);
+        var obj_data = { "api_input": s_api_input, "api_target": this.api_target };
+        var purl = g_APIUTL;
+        var request = $.ajax({
+            url: purl,
+            cache: false,
+            method: g_APIMethod,
+            data: obj_data,
+            dataType: g_APIResponseDataType
+        });
+
+        request.done(function (msg) {
+            if (msg.resultCode == g_const_Success_Code) {
+                Category.Load_Result(msg.scs);
+            }
+            else {
+                ShowMesaage(msg.resultMessage);
+            }
+        });
+
+        request.fail(function (jqXHR, textStatus) {
+            ShowMesaage(g_const_API_Message["7001"]);
+        });
+    },
+    GetStaticList: function myfunction() {
+        var msg = web_category;
+        /*5.2.7 新分类*/
+        Category.Load_Result(msg.scs);
+    },
+    Load_Result: function (resultlist) {
+        cateresultlist = resultlist
+        var level2_body = "";
+        var level3_body = "";
+        var classstr = "";
+        if (typeof (resultlist) == "object") {
+            $.each(resultlist, function (i, n) {
+                if (n.isBfdCatefory === "1") {
+                    //推荐分类，网站不展示
+                }
+                else {
+                    //组织2级分类
+                    level2_body += "<li data-id=\"" + (i + 1) + "\"> <span onclick=\"Category.Load_ProductList('category','" + n.categoryName + "')\">" + n.categoryName + "</span></li>";
+                    //组织3\4级分类
+                    level3_body += "<div class=\"sub_zt hide\" data-id=\"" + (i + 1) + "\">"
+                    if (typeof (n.scsThree) != "undefined") {
+                        $.each(n.scsThree, function (ii, nn) {
+                            level3_body += "<dl><dt><a  onclick=\"Category.Load_ProductList('category','" + nn.categoryName + "')\">" + nn.categoryName + "<i> &gt;</i></a></dt><dd>"
+                            if (typeof (nn.scs) != "undefined") {
+                                $.each(nn.scs, function (iii, nnn) {
+                                    //组织4级分类
+                                    level3_body += "<a onclick=\"Category.Load_ProductList('category','" + nnn.categoryName + "')\">" + nnn.categoryName + "</a>";
+                                });
+                            }
+                            level3_body += "</dd></dl>";
+                        });
+                    }
+
+                    level3_body += "</div>";
+                }
+            });
+        }
+        $("#ul_level2").html(level2_body);
+        $("#div_level3").html(level3_body);
+        menu_init();
+
+        //$("#pop").html(body);
+        //// jsScroll(document.getElementById('pop'), 6, '', 'b');
+        //$("#pop").each(function () {
+        //  //  $(this).perfectScrollbar();
+        //})
+    },
+    Load_ProductList: function (showtype, keyword) {
+        var p = "&showtype=" + showtype + "&keyword=" + encodeURI(keyword) + "&t=" + Math.random();
+        g_index.GoTo(g_const_PageURL.GetKey(g_const_PageURL.SearchList), p)
+    }
+};
+
+
+var l_zt;
+var t_zt;
+var _index_zt;
+var menuItem_zt;
+//$(document).ready(menu_init);
+function menu_init() {
+    var mod_menu = $(".containor_zt");//导航模块区
+    menu_zt();//执行展开二级菜单函
+    //setTimeout(menu(),1000);
+
+};
+
+var menu_zt = function () {
+    menuItem_zt = $("#ul_level2 li");//选择导航列表
+    menuItem_zt.each(menu_each_zt);/*导航菜单菜单*/
+    menuItem_zt.mouseleave(menu1_leave);/*导航菜单菜单*/
+    $(".containor_zt").mouseleave(menu2_mouse_leave);
+}
+
+
+//展开二级菜单 
+var menu_each_zt = function () {
+    _index_zt = $(this).index();//获取当前选择菜单列表的索引
+    $(this).mouseenter(menu_mouse_enter);
+}
+var menu_mouse_enter = function () {
+    l_zt = $(this);//获取当前鼠标滑过的列表的顶部坐标
+    t_zt = setTimeout("menu_mouse_enter_show()", 100)
+}
+
+
+function menu_mouse_enter_show() {
+
+    var y_ht = l_zt.position().top + 1;//获取当前鼠标滑过的列表的顶部坐标
+    var d_ht = l_zt.index()
+    $("#div_level3").show();
+    //$("#div_level3").css("top", y_ht);//需要显示的对应索引内容
+    l_zt.addClass("mouse-bg").siblings().removeClass("mouse-bg");
+    $("#div_level3>div").eq(d_ht).show().siblings().hide();
+
+}
+
+var menu1_leave = function () {
+
+    clearTimeout(t_zt);
+
+}
+
+var menu2_mouse_leave = function () {
+    $("#div_level3").hide();
+    menuItem_zt.removeClass("mouse-bg");
+}
+
+
+
+// 滑动滚动条
+
+var heght_nav = $("#nav1").offset().top + 42;
+
+$(window).scroll(function () {
+    if ($(window).scrollTop() > heght_nav) {
+        var new_heght_nav = $(window).scrollTop() - heght_nav;
+
+        $("#div_level3").animate({ top: new_heght_nav }, 50);
+    } else {
+        $("#div_level3").animate({ top: "0" }, 50);
+    }
+});
+
+
+(function ($) {
+    $(window).load(function () {
+        $(".nav_left_zt").mCustomScrollbar({
+            theme: "dark", //主题颜色					
+
+            autoHideScrollbar: false, //是否自动隐藏滚动条					
+            scrollInertia: 0,//滚动延迟					
+            horizontalScroll: false,//水平滚动条					
+
+        });
+    });
+})(jQuery);
+
+

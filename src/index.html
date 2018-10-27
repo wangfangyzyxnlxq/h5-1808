@@ -2,8 +2,453 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/public.css" />
+
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <!-- <script type="text/javascript" src="js/list.js"></script> -->
+
     </head>
     <body>
-    <p>你好啊</p>
+        <!-- 头部 -->
+        
+        <div id="top">
+            <div class="top con">
+             <span><a href="">收藏</a></span>
+             <span><a href="">首页</a></span>
+             <span><a href="html/login.html">请登录</a></span>
+             <span><a href="html/reg.html">免费注册</a></span>
+             <span><a href="">购物车<i>0</i>件</a></span>
+             <span><a href="">我的家有</a></span>
+             <span><a href="">可用优惠卷<i>0</i>张</a></span>
+             <span><a href="">我的收藏</a></span>
+             <span><a href=""><i class=sj></i>手机版</a></span>
+             <span><a href=""><i class=wx></i>微信版</a></span>
+            </div>
+            
+        </div>
+        <!-- logo区 -->
+            <div id="logo">
+                <div class="logo con">
+                    <h3><img src="images/logo.jpg" alt="" /></h3>
+                <div class="suo">
+                    <input type="text" />
+                    <a href="html/list.html">搜索</a><br />
+                    <div class="tz">
+                    <span><a href="html/list.html">新榜样</a></span>
+                    <span><a href="html/list.html">同仁堂</a></span>
+                    <span><a href="html/list.html">棉记</a></span>
+                    <span><a href="html/list.html">歌丽姬宝</a></span>
+                    <span><a href="html/list.html">4层抽纸30包</a></span>
+                    <span><a href="html/list.html">多洗来</a></span>
+                    <span><a href="html/list.html">键安喜</a></span>
+                    </div>
+                    </div>
+                   
+                         <!-- 我的购物车 s-->
+            <div class="mycart l" id="__AD_head__shopcart">
+                <div class="cart-bag">
+                    <div class="w-bj">
+                        <i class="icar t">
+                            <img src="picture/gwc.png" width="19" height="18" alt="家有汇购物车" title="家有汇购物车"
+                            />
+                        </i>
+                        <i class="ijt t">
+                        </i>
+                        <a href="html/car.html">
+                            我的购物车
+                        </a>
+                        <span class="cartnum t" id="cart_num_1">
+                            0
+                        </span>
+                    </div>
+                </div>
+                <div class="cart-info">
+                    <!--购物车没有商品 s-->
+                    <!--<p class="none_cart">购物车还没有商品，快去挑选吧~</p>-->
+                    <!--购物车没有商品 e-->
+                    <!--购物车有商品 s-->
+                   
+                        <!--购物车没有商品 s-->
+                        <p class="none_cart">
+                      <!--   <ul id="output"></ul> -->
+                       <ul id="output">
+
+                        <!-- <span class="price">￥</span>
+                        <span class="uname"></span> -->
+                        </ul>
+                        <span id="all"></span>
+                        </p>
+                        <!--购物车没有商品 e-->
+                
+                    <!-- 购物车有商品 e-->
+                </div>
+            </div>
+            <!-- 我的购物车 e-->
+                    </div>
+            </div>
+
+        
+    <!-- nav部分 -->
+        <div id="nav">
+            <div class="nav con">
+                 <ul class="u1">
+                        <li>所有商品分页
+                        </li>
+                        <li><a href="">首页</a></li>
+                        <li><a href="">TV直播</a></li>
+                        <li><a href="">品牌惠</a></li>
+                        <li><a href="">惠家友APP</a></li>
+                        <li><a href="">家有尊享</a></li>
+                    </ul>
+            </div>
+        </div>
+      <!-- nav-main部分       -->
+            <div id="nav_m">
+                <div class="nav_m con">
+                    <div class="nav_l">
+                        <ul>
+                                <li><a href="">营养保健</a>
+                                    <dl>
+                                        <dt><a href="">营养成分></a>
+                                            <dd>
+                                            <a href="">维生素/矿物质</a>
+                                            <a href="">鱼鳞/油脂</a>
+                                            <a href="">蛋白质</a>
+                                            <a href="">胶原蛋白</a>
+                                            <a href="">葡萄籽</a>
+                                            <a href="">左旋肉碱</a>
+                                            <a href="">益生菌</a>
+                                            <a href="">钙片</a>
+                                            </dd>
+                                        </dt>
+                                    
+                                    
+                                    <dt>
+                                    <a >滋补养生</a>
+                                    </dt>
+                                    <dd><a >阿胶</a><a >蜂蜜/蜂产品</a><a >枸杞/黄芪</a><a>燕窝</a><a >养生茶饮</a><a >冬虫夏草</a><a >人参/西洋参</a><a >灵芝/孢子粉</a><a >三七/当归</a><a >石斛/枫斗</a><a >药食同源</a><a >其他滋补养生</a></dd></dl>
+                                </li>
+                                <li><a href="">美容化妆</a>
+                                    <dl>
+                                        <dt>面部护肤
+                                          
+                                        </dt>
+                                        <dt>头发护理
+                                           
+                                        </dt>
+                                        <dt>身体护乳
+                                            
+                                            <dd></dd>
+                                        </dt>
+                                        <dt>香水彩妆
+                                           
+                                        </dt>
+                                    </dl>
+                
+                                </li>
+                                <li><a href="">服饰鞋包</a>
+                                    <dl>
+                                        <dt>女士内衣
+                                            
+                                        </dt>
+                                        <dt>男士鞋区
+                                            
+                                        </dt>
+                                        <dt>女士鞋包
+                                            
+                                        </dt>
+                                        <dt>女士鞋区
+                                            
+                                        </dt>
+                                    </dl>
+            
+                                </li>
+                               
+                                <li><a href="">家居家纺</a>
+                                    <dl>
+                                        <dt>住宅家具
+                                           
+                                        </dt>
+                                        <dt>收纳清洁
+                                            
+                                        </dt>
+                                        <dt>生活日用
+                                            
+                                        </dt>
+                                        <dt>母婴玩具
+                                           
+                                        </dt>
+                                    </dl>
+                              <li><a href="">酒水名茶</a>
+                                   <dl>
+                                        <dt>饮料冲调
+                                           
+                                        </dt>
+                                        <dt>中外名酒
+                                            
+                                        </dt>
+                                        <dt>茗茶
+                                            
+                                        </dt>
+                                        
+                                    </dl>  
+                                </li>
+                                </li>
+                                <li><a href="">家用电器</a>
+                                   <dl>
+                                        <dt>生活电器
+                                           
+                                        </dt>
+                                        <dt>厨房电器
+                                            
+                                        </dt>
+                                        <dt>数码
+                                            
+                                        </dt>
+                                        
+                                    </dl>   
+                                </li>
+                                <li><a href="">粮油生鲜</a>
+                                   <dl>
+                                        <dt>生鲜肉蛋
+                                            
+                                        </dt>
+                                        <dt>新鲜果蔬
+                                           
+                                        </dt>
+                                        <dt>粮油调味
+                                            
+                                        </dt>
+                                        
+                                    </dl>  
+                                </li>
+                                <li><a href="">珠宝钟表</a>
+                                <dl>
+                                        <dt>手表
+                                           
+                                        </dt>
+                                        <dt>珍珠
+                                            
+                                        </dt>
+                                        <dt>翡翠玉石
+                                            
+                                        </dt>
+                                        
+                                    </dl>  
+                                </li>
+                                <li><a href="">休闲食品</a>
+                                 <dl>
+                                     <dt>休闲食品
+                                         <dd></dd>
+                                     </dt>
+                                 </dl>
+
+                                </li>
+                                <li><a href="">黄金饰品</a>
+                                   <dl>
+                                        <dt>黄金
+                                           
+                                        </dt>
+                                        <dt>K金
+                                            
+                                        </dt>
+                                        
+                                        
+                                    </dl>   
+                                </li>
+                                <li><a href="">海外购</a>
+                                <dl>
+                                        <dt>手表配饰
+                                           
+                                        </dt>
+                                        <dt>进口美食
+                                            
+                                        </dt>
+                                        
+                                       
+                                    </dl>  
+                                </li>
+                            </ul> 
+                    </div>
+                    <div class="nav_c">
+                       <img src="images/ban.jpg" alt="" />
+                       <img src="images/ban_x.jpg" alt="" /> 
+                    </div>
+                    <div class="nav_r">
+                        <h3><img src="images/ban_r.png" alt="" /></h3>
+                        <p>hi,欢迎来到惠家有</p>
+                        <a href="html/login.html" class="dl">登陆</a>
+                        <a href="html/reg.html" class="zc">免费注册</a>
+                       <img src="images/ban_y.PNG" alt="" />
+                    </div>
+                </div>
+            </div>
+
+    <!--********************************** -->
+            <div id="xs">
+            <p>限时抢购</p>
+            <div class="countDown"> 
+            </div>
+            </div>
+    <!-- 点击切换图片 -->
+             <div id="bd con">
+            <div class="bd con">
+                
+            <ul class="list">
+            
+            </ul> 
+            </div>
+            </div>
+    
+    
+      
+        
+   
+    <!-- main区域 -->
+    <div id="main">
+    <div class="f1 con">
+        <div class="fl1">
+            <h2>1F品质家居</h2>
+            <div class="z1">
+            <img src="images/sc.jpg" alt="" class ="d1"/>
+             <ul class="u1">
+                 <li><img src="images/1-1.jpg" alt="" /></li>
+                 <li><img src="images/1-2.jpg" alt="" /></li>
+                 <li><img src="images/1-3.jpg" alt="" /></li>
+                 <li><img src="images/1-4.jpg" alt="" /></li>
+             </ul>
+            </div>
+            <div class="z2">
+        <div class="focus">
+        <ul class="u2">
+            <li><img src="images/001.jpg"></li>
+            <li><img src="images/002.jpg"></li>
+            <li><img src="images/003.jpg"></li>
+        </ul>
+        <div class="zjt">
+            <img src="images/zjt.png" height="44" width="22" alt="" />
+        </div>
+        <div class="yjt">
+            <img src="images/yjt.png" height="42" width="22" alt="" />
+        </div>
+    </div>
+        <img src="images/fl1.jpg" alt="" />
+        <img src="images/fl2.jpg" alt="" />
+        <img src="images/fl3.jpg" alt="" />
+    </div> 
+        </div>
+        <div class="fr1">
+            <h3>本月热销榜</h3>
+            <ul>
+                <li><img src="images/fr1.PNG" alt="" /></li>
+                <li><img src="images/fr2.PNG" alt="" /></li>
+                <li><img src="images/fr3.PNG" alt="" /></li>
+                <li><img src="images/fr4.PNG" alt="" /></li>
+            </ul>
+        </div>
+    </div>
+    <div class="f1 con">
+        <div class="fl1">
+            <h2>2F美妆个户</h2>
+            <div class="z1">
+            <img src="images/2f.jpg" alt="" class ="d1"/>
+             <ul class="u1">
+                 <li><img src="images/2-1.jpg" alt="" /></li>
+                 <li><img src="images/2-2.jpg" alt="" /></li>
+                 <li><img src="images/2-3.jpg" alt="" /></li>
+                 <li><img src="images/2-4.jpg" alt="" /></li>
+             </ul>
+            </div>
+            <div class="z2">
+        <img src="images/002.jpg" alt="" class="dt"/>
+        <img src="images/2f1-1.jpg" alt="" />
+        <img src="images/2f1-2.jpg" alt="" />
+        <img src="images/2f1-3.jpg" alt="" />
+    </div> 
+        </div>
+        <div class="fr1">
+            <h3>本月热销榜</h3>
+            <ul>
+                <li><img src="images/fr1.PNG" alt="" /></li>
+                <li><img src="images/fr2.PNG" alt="" /></li>
+                <li><img src="images/fr3.PNG" alt="" /></li>
+                <li><img src="images/fr4.PNG" alt="" /></li>
+            </ul>
+        </div>
+    </div>
+    <div class="f1 con">
+        <div class="fl1">
+            <h2>3F服装美饰</h2>
+            <div class="z1">
+            <img src="images/z1.jpg" alt="" class ="d1"/>
+             <ul class="u1">
+                 <li><img src="images/x2.jpg" alt="" /></li>
+                 <li><img src="images/x5.jpg" alt="" /></li>
+                 <li><img src="images/x4.jpg" alt="" /></li>
+                 <li><img src="images/x1.jpg" alt="" /></li>
+             </ul>
+            </div>
+            <div class="z2">
+        <img src="images/3fc.jpg" alt="" class="dt"/>
+        <img src="images/3f1-1.jpg" alt="" />
+        <img src="images/3f1-2.jpg" alt="" />
+        <img src="images/3f1-3.jpg" alt="" />
+    </div> 
+        </div>
+        <div class="fr1">
+            <h3>本月热销榜</h3>
+            <ul>
+                <li><img src="images/3fy1.PNG" alt="" /></li>
+                <li><img src="images/3fy2.PNG" alt="" /></li>
+                <li><img src="images/3fy3.PNG" alt="" /></li>
+                <li><img src="images/3fy4.PNG" alt="" /></li>
+            </ul>
+        </div>
+    </div>
+    <div class="f1 con">
+        <div class="fl1">
+            <h2>4F食品保健</h2>
+            <div class="z1">
+            <img src="images/4f1.jpg" alt="" class ="d1"/>
+             <ul class="u1">
+                 <li><img src="images/4fl1.jpg" alt="" /></li>
+                 <li><img src="images/4fz2.jpg" alt="" /></li>
+                 <li><img src="images/4fz3.jpg" alt="" /></li>
+                 <li><img src="images/4fz4.jpg" alt="" /></li>
+             </ul>
+            </div>
+            <div class="z2">
+        <img src="images/4fc.jpg" alt="" class="dt"/>
+        <img src="images/4fc1-1.jpg" alt="" />
+        <img src="images/4fc1-2.jpg" alt="" />
+        <img src="images/4fc1-3.jpg" alt="" />
+    </div> 
+        </div>
+        <div class="fr1">
+            <h3>本月热销榜</h3>
+            <ul>
+                <li><img src="images/4f1-1.PNG" alt="" /></li>
+                <li><img src="images/4f1-2.PNG" alt="" /></li>
+                <li><img src="images/4f1-3.PNG" alt="" /></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <!-- footer部分 -->
+    <div class="footer con">
+        <div class="foot1">
+            <img src="images/footer.PNG" alt="" />
+        </div>
+    </div>
+    <!-- bottom部分 -->
+    <div id="bottom">
+    <div class="bottom con">
+        <img src="images/bottom.PNG" alt="" />
+    </div>
+    </div>
     </body>
 </html>

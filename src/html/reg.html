@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+         <link rel="stylesheet" type="text/css" href="../css/base.css" />
+
+        <link rel="stylesheet" type="text/css" href="../css/reset.css"
+         />
+        <link rel="stylesheet" type="text/css" href="../css/reg.css" />
+
+        <script type="text/javascript" src="../lib/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="../js/reg.js"></script>
+    </head>
+    <body>
+     <div id="pageHeader"></div>
+        <div class="reg con">
+                <div class="fl">
+            <ul class="regist">
+               <li><span><i>*</i>手机号</span>
+                <input type="text" placeholder="请输入11位有效手机号" id="telePhone"/>
+                <span id="pd"></span>
+                </li>
+                <li>
+                <span><i>*</i>手机验证码</span>
+                <input style="width: 150px;" id="phover" type="text" />
+                <input type="button" id="getcode"  value="获取短信验证码"/><i style="position: absolute;left: 170px;top: 240px;font-size: 70px;z-index: 800;color: skyblue;margin-left:5px;"></i>
+                </li>
+               <li><span><i>*</i>设置密码</span>
+                  <input type="password" placeholder="请输入6-16个字符，不能加空格哦" id="setmima"/> <span id="yz1"></span> 
+               </li>
+               <li><span><i>*</i>确认密码</span>
+                <input type="password" placeholder="请输入确认密码" id="qrmima"/><span id="yz"></span>
+               </li>
+                
+               <li><span><i>*</i>验证码</span>
+                    <input type="text" id="kcode"/>
+                    <input type="button" id ="btncode" /><br />
+                    
+               </li>
+                <p><input type="checkbox" checked id="btnAgree"/><label for="btnAgree" >我已阅读并同意《会员注册协议》和《隐私保护政策》</label></p>
+                <p class="on"><a href="" id="btnRegist">注册</a></p>
+                <font><a href="login.html">我已注册,立即登录</a></font>
+             </ul>
+              </div>
+            <div class="fr">
+                <img src="../images/dl.jpg" alt="" />
+            </div>
+        </div>
+       <!-- footer部分 -->
+     <div class="footer con">
+        <div class="foot1">
+            <img src="../images/footer.PNG" alt="" />
+        </div>
+     </div>
+     <!-- bottom部分 -->
+    <div id="bottom">
+    <div class="bottom con">
+        <img src="../images/bottom.PNG" alt="" />
+    </div>
+    </div>
+    </body>
+</html>
